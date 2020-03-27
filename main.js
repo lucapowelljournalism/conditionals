@@ -9,16 +9,21 @@ $("body").on("keyup keydown keypress change", ".department input", function (e) 
 		if (user_input !== "") {
 			user_input = parseFloat(user_input);
 			running_total = running_total - user_input;
-
 		}
 	});
 
 	if (running_total >= 0 && running_total <= 20) {
-		$(".total_budget").addClass("warning").removeClass("error");
+		$(".total_budget").addClass("warning").removeClass("error")
+		$(".close_to_budget").addClass("show")
+		$(".over_budget").removeClass("show");
 	} else if (running_total < 0) {
 		$(".total_budget").addClass("error").removeClass("warning");
+		$(".close_to_budget").removeClass("show")
+		$(".over_budget").addClass("show");
 	} else {
-		$(".total_budget").removeClass("error").removeClass("warning");
+		$(".total_budget").removeClass("error").removeClass("warning")
+		$(".close_to_budget").removeClass("show")
+		$(".over_budget").removeClass("show");
 	}
 	$(".total_budget span").text(running_total);
 });

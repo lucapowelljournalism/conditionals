@@ -41,6 +41,7 @@ html, body {
     letter-spacing: 2px;
     background-color: #FFF;
     padding: .5em;
+    text-align: center;
 }
 
 .total_budget.warning {
@@ -53,10 +54,30 @@ html, body {
     font-weight: bold;
 }
 
+.over_budget {
+    font-weight: bold;
+    font-size: 1.3em;
+    display: inline;
+    color: red;
+    opacity: 0;
+}
+
+.close_to_budget {
+    font-weight: bold;
+    font-size: 1.3em;
+    display: inline;
+    color: #e8d82a;
+    opacity: 0;
+}
+
 input {
     width: 100%;
     display: block;
     padding: .5em;
+}
+
+.show {
+    opacity: 1;
 }
 
 /* Tablet/Desktop overrides */
